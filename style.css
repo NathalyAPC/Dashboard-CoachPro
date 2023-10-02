@@ -1,0 +1,751 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.logo {
+    width: 200px;
+    height: 500px;
+}
+
+.contenedor_padre {
+    background-color: #e4eff2;
+    width: 100%;
+    height: 100vh; /*esto ayuda que cuando el height crezca lo que necesite y no se rompa */
+    display: flex;
+}
+
+.contenedor_menu {
+    width: 400px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.menu_opciones {
+    width: 250px;
+    height: 700px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.coach_pro {
+    display: flex;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.coach {
+    font-size: 2.7rem;
+    font-weight:bold;
+    color: #1C2F1B;
+}
+
+.pro {
+    font-size: 2.7rem;
+    font-weight:lighter;
+    color: #1C2F1B;
+}
+
+.dashboard_text {
+    font-size: 1.4rem;
+    font-weight:lighter;
+    color:rgb(229, 229, 229);
+    margin-left: 15px;
+}
+
+.opciones_text {
+    font-size: 1.4rem;
+    font-weight:lighter;
+    color:#428392;
+    margin-left: 15px;
+}
+
+.opciones {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+}
+
+.opciones_dashboard {
+    width: 100%;
+    height: 60px;
+    background-color: #428392;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    margin-bottom: 5px;
+
+}
+
+.opciones_opciones {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.opciones_opciones:hover {
+    background-color: #428392;
+}
+
+.opciones_opciones:hover .opciones_text,
+.opciones_opciones:hover .fa-user-group,
+.opciones_opciones:hover .fa-envelope,
+.opciones_opciones:hover .fa-chart-simple,
+.opciones_opciones:hover .fa-calendar-days,
+.opciones_opciones:hover .fa-wallet,
+.opciones_opciones:hover .fa-right-left,
+.opciones_opciones:hover .fa-chart-bar
+{
+    color:rgb(229, 229, 229);
+}
+
+.fa-bars-staggered {
+    font-size: 1.8rem;
+    margin-left: 25px;
+    color:rgb(229, 229, 229);
+}
+
+.fa-user-group, .fa-envelope, .fa-chart-simple, .fa-calendar-days, .fa-wallet, .fa-right-left, .fa-chart-bar {
+    font-size: 1.8rem;
+    margin-left: 25px;
+    color: #428392;
+}
+
+.menu_line {
+    width: 90%;
+    height: 1px;
+    border-color: #b9c3c430;
+    margin: 20px 18px 20px;
+}
+
+.contenedor_dashboard {
+    border-left: 2px solid #b9c3c45a;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.menu_dashboard {
+    width: 250px;
+    height: 700px;
+    margin-top: 25px;
+}
+
+.saludo_perfil, .juego_estadisticas, .clasificacion_posesiones {
+    margin-left: 30px;
+}
+
+.saludo_perfil {
+    width: 95%;
+    height: 150px;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+}
+
+.saludo {
+    width: 50%;
+    height: 100px;
+    margin-left: 10px;
+}
+.perfil {
+    width: 50%;
+    height: 100px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.juego_estadisticas {
+    width: 95% ;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.juegos {
+    background-color: #DEE9EB;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.426);
+    width: 50%;
+    height: 200px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.estadisticas {
+    background-color: #DEE9EB;
+    border-radius: 20px;
+    border: 2px solid white;
+    width: 50%;
+    height: 200px;
+    margin-right: 10px;
+    margin-left: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.426);
+}
+
+.clasificacion_posesiones {
+    width: 95% ;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.clasificacion {
+    background-color: #DEE9EB;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.426);
+    width: 50%;
+    height: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.standings_view {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.team_container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.team_1 {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.opciones_1, .opciones_2, .opciones_3{
+    width: 10%;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    color:#4b4b4b;
+}
+
+.opciones_1 {
+    padding-left: 30px;
+    font-size: 1.1rem;
+    font-weight: lighter;
+    color:#4b4b4b;
+}
+
+.opciones_3 {
+    font-weight: bold;
+}
+
+.team_2{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 3px solid white;
+}
+
+.team_3 {
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 3%;
+}
+
+.img_seleccion{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 30%;
+    font-size: 1.1rem;
+    color: #1C2F1B;
+}
+
+.img_opcions {
+    width: 15%;
+    height: auto;
+    border-radius: 20%;
+    border: 1px solid white;
+
+}
+
+.juventus_opcions {
+    font-size: 1.4rem;
+    font-weight: bolder;
+    color: #1C2F1B;
+}
+
+.opcions_jv {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color:#4b4b4b;
+    padding-left: 10%;
+}
+
+.posesiones {
+    width: 50%;
+    height: 90%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.posesiones_1, .posesiones_2 {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.posesiones_2 {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.posesiones_3 {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    background-image: url('img/background.png');
+    border-radius: 20px;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.posesiones_text {
+    letter-spacing: 3px;
+    font-size: 1rem;
+    margin-top: 5%;
+    margin-left: 5%;
+    color:rgb(229, 229, 229);
+}
+
+.text_segundo {
+    width: 42%;
+    font-size: 3rem;
+    margin-top: 1%;
+    margin-left: 5%;
+    font-weight: bold;
+    color:rgb(229, 229, 229);
+
+}
+
+.posesiones_boton{
+    width: 30%;
+    height: 25%;
+    margin-top: 2%;
+    border-radius: 20px;
+    border: none;
+    margin-left: 5%;
+    color:#428392;
+    background-color: #DEE9EB;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.426);
+}
+
+.posesiones_boton:hover {
+    background-color: #34459c;
+    color: white;
+}
+
+.si {
+    width: 100%;
+    height: 100%;
+}
+
+.posesiones_porcentaje {
+    width: 48%;
+    height: 95%;
+    background-color: #DEE9EB;
+    border-radius: 20px;
+    border: 2px solid white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.426);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.container_posesiones_2 {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.container_posesiones_1{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 3%;
+}
+
+.icon_pocentaje {
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(180deg, #913ce0, #cd98ff);
+    border-radius: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.fa-futbol, .fa-money-bill-wave, .fa-star-half-stroke, .fa-percent {
+    font-size: 1.7rem;
+    color: white;
+}
+
+.posesion_text {
+    font-size: 1rem;
+    letter-spacing: 2px;
+    color: #1C2F1B;
+}
+
+.posesion_number {
+    font-size: 3rem;
+    margin-top: 1%;
+    color: #1C2F1B;
+}
+
+
+span {
+    font-size: 2rem;
+    color: #1C2F1B;
+}
+
+.welcome {
+    color: #428392;
+    margin-top: 15px;
+    font-size: 1.5rem;
+    font-weight: lighter;
+
+}
+
+.dashboard {
+    color: #1C2F1B;
+    font-family: Arial, Helvetica;
+    margin-top: 7px ;
+    font-size: 4rem;
+    font-weight: bolder;
+}
+
+.fa-magnifying-glass {
+    color: #428392;
+    font-size: 17px;
+    margin-top: 23px;
+    margin-right: 15px;
+}
+
+.fa-bell {
+    color: #428392;
+    font-size: 17px;
+    margin-top: 23px;
+    font-weight: lighter;
+    margin-right: 15px;
+}
+
+.img_usuario {
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    justify-content: center;
+    margin-top: 15px;
+    margin-right: 10px;
+}
+
+.rex {
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+.nextgame_calendar {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.nextgame , .game, .standings {
+    margin-left: 30px;
+    font-size: 1.5rem;
+    color:#656565;
+    font-weight: 600;
+
+}
+
+.calendar, .view_estadisticas, .view_all {
+    margin-right: 30px;
+    font-size: 1rem;
+    color:#428392;
+}
+
+.serie_date {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.img_serie {
+    width: 15px;
+    height: 25px;
+    border-radius: 20px;
+}
+
+.serie {
+    font-size: 1.4rem;
+    margin-left: 10px;
+    color:  #8ba8ab;
+}
+
+.v_line {
+    width: 1px; /* Ancho de la línea vertical */
+    height: 20px; /* Altura de la línea vertical */
+    background-color: #e8e6e6; /* Color de la línea vertical (negro en este caso) */
+    margin: 15px; /* Centrar la línea vertical horizontalmente */
+}
+
+.datatime {
+    font-size: 1.4rem;
+    color:  #8ba8ab ;
+}
+
+.vs {
+    width: 100%;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vs_juventus, .vs_realmadrid {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #1C2F1B;
+}
+
+.vs_juventus {
+    margin-right: 8px;
+}
+
+.vs_realmadrid {
+    margin-left: 8px;
+}
+
+.circle {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(-135deg, #e36971, #ff98a2);
+    border-radius: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.circle_vs {
+    z-index: 2;
+    color: aliceblue;
+
+}
+
+.circle_line {
+    width: 1px; /* Ancho de la línea vertical */
+    height: 70px; /* Altura de la línea vertical */
+    background-color: #e8e6e6; /* Color de la línea vertical (negro en este caso) */
+    transform: rotate(45deg);
+    position: absolute;
+    z-index: 0;
+    background: linear-gradient(-135deg, #e36971, #ff98a2);
+}
+
+.img_vs_jv {
+    width: 55px;
+    height: 60px;
+    border-radius: 20px;
+    border: 1px solid rgb(210, 210, 210);
+    margin-right: 20px;
+}
+
+.img_vs_rm {
+    width: 55px;
+    height: 60px;
+    border-radius: 20px;
+    border: 1px solid rgb(210, 210, 210);
+    margin-left: 20px;
+}
+
+.game_estadisticas {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.estadisticas_contenedor {
+    width: 100%;
+    height: 170px;
+    background-color: cornflowerblue;
+
+}
+
+.line_wite {
+    width: 90%;
+    height: 120px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+    margin-top: 10px;
+    border: 2px solid white;
+
+}
+
+.line_colors{
+    width: 100%;
+    height: 50px;
+    display: flex;
+}
+
+.line_line {
+    width: 65%;
+    height: 4px;
+    border-color: #428392;
+    background-color: #428392;
+    margin: 30px 0 20px 18px;
+    border-radius: 20px;
+    border: none;
+}
+
+.line_2 {
+    width: 15%;
+    height: 4px;
+    border-color: white;
+    background-color: white;
+    margin: 30px 0 20px;
+    border: none;
+}
+
+.line_3 {
+    width: 10%;
+    height: 4px;
+    background: linear-gradient(to right, #ffffff, red);
+    margin: 30px 0 0 0;
+    border-radius: 20px;
+    border: none;
+}
+
+.container_calificaciones {
+    width: 100%;
+    height: 70px;
+    display: flex;
+}
+
+.pl {
+    width: 20%;
+    height: 40px;
+    margin: 0 15px 0 20px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.line_pl {
+    width: 1px;
+    height: 50px;
+    border: none;
+    background-color: white;
+}
+
+.victories {
+    width: 20%;
+    height: 40px;
+    margin: 0 5px 0 15px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.draws {
+    width: 20%;
+    height: 40px;
+    margin: 0 5px 0 5px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.lost {
+    width: 20%;
+    height: 40px;
+    margin: 0 5px 0 5px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pl_text {
+    font-size: 1rem;
+    color:#4b4b4b;
+    margin-bottom: 10px;
+}
+
+.pl_number {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color:#4b4b4b;
+}
